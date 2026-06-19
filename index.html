@@ -25,7 +25,7 @@
         }
         
         header { 
-            padding: 80px 40px; 
+            padding: 60px 20px; 
             text-align: center; 
             border-bottom: 1px dashed #333; 
         }
@@ -40,38 +40,37 @@
             margin-top: 10px; 
         }
 
-        .banner { 
-            width: 100%; 
-            height: 65vh; 
+   
+        .banner-container {
+            width: 100%;
+            position: relative;
+            padding-top: 56.25%;
             background-size: cover; 
             background-position: center; 
-            position: relative; 
-            display: flex; 
-            align-items: flex-end; 
-            padding: 40px; 
             border-bottom: 1px solid #222;
         }
-        .banner::after { 
+        .banner-container::after { 
             content: ''; 
             position: absolute; 
             inset: 0; 
-            background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.2)); 
+            background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.1)); 
+            z-index: 1;
         }
-        .banner h2 { 
-            position: relative; 
+        .banner-container h2 { 
+            position: absolute; 
+            bottom: 40px;
+            left: 40px;
             z-index: 2; 
             font-size: 3rem; 
             color: var(--accent); 
             text-transform: uppercase;
         }
 
-     
         .skills { 
             padding: 60px 20px; 
             max-width: 800px; 
             margin: 0 auto; 
             background: var(--bg); 
-            color: var(--text); 
         }
         .skills h3 { 
             font-size: 2rem; 
@@ -107,21 +106,35 @@
         }
         .gallery { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 10px; 
-            padding: 10px; 
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
+            gap: 15px; 
+            padding: 15px; 
             background: #000; 
         }
         .gallery img { 
             width: 100%; 
-            height: 350px; 
-            object-fit: cover; 
+            height: auto;
+            aspect-ratio: 16 / 9; 
+            object-fit: contain; 
+            background: #0a0a0a;
             filter: grayscale(100%) contrast(120%); 
             transition: 0.4s; 
         }
         .gallery img:hover { 
             filter: grayscale(0%) contrast(100%); 
-            transform: scale(0.98); 
+            transform: scale(0.99); 
+        }
+
+  
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            .banner-container h2 {
+                font-size: 2rem;
+                left: 20px;
+                bottom: 20px;
+            }
         }
 
         footer { 
@@ -149,8 +162,8 @@
         <div class="subtitle">VFX // GRAPHIC DESIGN // PROGRAMMING</div>
     </header>
 
-    <div class="banner" style="background-image: url('photo_2026-06-19_11-27-32.jpg');">
-        <h2>GRAPHIC DESIGN / PROGRAMMING</h2>
+    <div class="banner-container" style="background-image: url('photo_2026-06-19_11-27-32.jpg');">
+        <h2>GRAPHIC DESIGN</h2>
     </div>
 
     <section class="skills">
@@ -172,7 +185,7 @@
         </div>
     </section>
 
-    <div class="banner" style="background-image: url('quality_restoration_20250415194536971');">
+    <div class="banner-container" style="background-image: url('quality_restoration_20250415194536971.jpg');">
         <h2>GRUNGE STYLE</h2>
     </div>
 
