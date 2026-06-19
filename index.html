@@ -9,6 +9,8 @@
             --bg: #000000; 
             --text: #ffffff; 
             --accent: #ffffff;
+            --bar-bg: #1a1a1a;
+            --shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         * { 
             margin: 0; 
@@ -63,10 +65,13 @@
             text-transform: uppercase;
         }
 
+        /* Исправленная секция скиллов */
         .skills { 
             padding: 60px 20px; 
             max-width: 800px; 
             margin: 0 auto; 
+            background: var(--bg); /* Чёрный фон */
+            color: var(--text); /* Белый текст */
         }
         .skills h3 { 
             font-size: 2rem; 
@@ -82,16 +87,17 @@
             justify-content: space-between; 
             margin-bottom: 8px; 
             font-weight: bold;
+            text-shadow: var(--shadow); /* Тень для читаемости */
         }
         .progress-bg { 
             width: 100%; 
             height: 12px; 
-            background: #1a1a1a; 
+            background: var(--bar-bg); /* Тёмно-серый фон полоски */
             border: 1px solid #333;
         }
         .progress-fill { 
             height: 100%; 
-            background: var(--accent); 
+            background: var(--accent); /* Белая заливка */
         }
 
         .gallery-title {
