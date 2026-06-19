@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVCOFFEE_FX | Portfolio</title>
+    <style>
+        :root { 
+            --bg: #0a0a0a; 
+            --text: #f0f0f0; 
+            --accent: #c4ff00;
+        }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Courier New', Courier, monospace; 
+        }
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            overflow-x: hidden; 
+        }
+        
+        /* ШАПКА */
+        header { 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-bottom: 1px dashed #333; 
+        }
+        h1 { 
+            font-size: 3.5rem; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+        }
+        .subtitle { 
+            color: #888; 
+            font-size: 1.2rem; 
+            margin-top: 10px; 
+        }
 
+        .banner { 
+            width: 100%; 
+            height: 65vh; 
+            background-size: cover; 
+            background-position: center; 
+            position: relative; 
+            display: flex; 
+            align-items: flex-end; 
+            padding: 40px; 
+            border-bottom: 1px solid #222;
+        }
+        .banner::after { 
+            content: ''; 
+            position: absolute; 
+            inset: 0; 
+            background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.2)); 
+        }
+        .banner h2 { 
+            position: relative; 
+            z-index: 2; 
+            font-size: 3rem; 
+            color: var(--accent); 
+            text-transform: uppercase;
+        }
+
+      
+        .skills { 
+            padding: 60px 20px; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+        .skills h3 { 
+            font-size: 2rem; 
+            margin-bottom: 40px; 
+            border-left: 5px solid var(--accent); 
+            padding-left: 15px; 
+        }
+        .skill-bar { 
+            margin-bottom: 25px; 
+        }
+        .skill-info { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 8px; 
+            font-weight: bold;
+        }
+        .progress-bg { 
+            width: 100%; 
+            height: 12px; 
+            background: #1a1a1a; 
+            border: 1px solid #333;
+        }
+        .progress-fill { 
+            height: 100%; 
+            background: var(--accent); 
+        }
+
+      
+        .gallery-title {
+            text-align: center;
+            font-size: 2rem;
+            padding: 40px 0 20px;
+        }
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 10px; 
+            padding: 10px; 
+            background: #000; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 350px; 
+            object-fit: cover; 
+            filter: grayscale(100%) contrast(120%); 
+            transition: 0.4s; 
+        }
+        .gallery img:hover { 
+            filter: grayscale(0%) contrast(100%); 
+            transform: scale(0.98); 
+        }
+
+       
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            border-top: 1px solid #333; 
+        }
+        a.social { 
+            color: var(--accent); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        a.social:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LVCOFFEE_FX</h1>
+        <div class="subtitle">VFX // GRAPHIC DESIGN // AFTER MOTION Z</div>
+    </header>
+
+    <div class="banner" style="background-image: url('photo_2026-06-19_11-28-03.jpg');">
+        <h2>MOTION & DESIGN</h2>
+    </div>
+
+    <section class="skills">
+        <h3>SKILLS & PROGRESS</h3>
+        
+        <div class="skill-bar">
+            <div class="skill-info"><span>AFTER MOTION Z</span><span>PRO</span></div>
+            <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-info"><span>HTML & CSS</span><span>50%</span></div>
+            <div class="progress-bg"><div class="progress-fill" style="width: 50%;"></div></div>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-info"><span>PYTHON</span><span>10%</span></div>
+            <div class="progress-bg"><div class="progress-fill" style="width: 10%;"></div></div>
+        </div>
+    </section>
+
+    <div class="banner" style="background-image: url('photo_2026-06-19_11-27-32.jpg');">
+        <h2>DARK AESTHETICS</h2>
+    </div>
+
+    <div class="gallery-title">PROJECTS // GALLERY</div>
+
+    <section class="gallery">
+        <img src="photo_2026-06-19_11-27-56.jpg" alt="Artwork 1">
+        <img src="photo_2026-06-19_11-27-41.jpg" alt="Artwork 2">
+        <img src="photo_2026-06-19_11-27-45.jpg" alt="Artwork 3">
+        <img src="photo_2026-06-19_11-27-48.jpg" alt="Artwork 4">
+        <img src="photo_2026-06-19_11-27-52.jpg" alt="Artwork 5">
+        <img src="photo_2026-06-19_11-28-00.jpg" alt="Artwork 6">
+    </section>
+
+    <footer>
+        <p style="margin-bottom: 20px; color: #888;">OPEN FOR COMMISSIONS</p>
+        <a href="#" class="social">Telegram</a>
+        <a href="#" class="social">TikTok</a>
+        <a href="#" class="social">Discord</a>
+    </footer>
+
+</body>
+</html>
